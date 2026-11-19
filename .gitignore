@@ -1,0 +1,25 @@
+@'
+
+# Generated backtest reports
+backtest_reports/
+
+# Logs
+*.log
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+baseline_snapshot_*/
+*.zip
+'@ | Add-Content .gitignore

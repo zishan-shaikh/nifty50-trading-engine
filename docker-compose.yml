@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:17
+    container_name: nifty50-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: niftydb
+      POSTGRES_USER: niftyuser
+      POSTGRES_PASSWORD: niftypass
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - nifty50_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U niftyuser -d niftydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  nifty50_pgdata:

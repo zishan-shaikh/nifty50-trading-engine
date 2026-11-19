@@ -1,0 +1,8 @@
+pandas>=2.2,<3
+numpy>=1.26
+yfinance>=0.2.54
+SQLAlchemy>=2.0
+psycopg[binary]>=3.2
+python-dotenv>=1.0
+requests>=2.32
+pytest>=8.0

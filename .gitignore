@@ -23,3 +23,7 @@ Thumbs.db
 baseline_snapshot_*/
 *.zip
 '@ | Add-Content .gitignore
+# Environment secrets
+.env
+.env.*
+!.env.example
